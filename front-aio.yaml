@@ -1,9 +1,36 @@
+
+Skip to content
+This repository
+
+    Pull requests
+    Issues
+    Marketplace
+    Explore
+
+    @simonLouvet
+
+20
+115
+
+    102
+
+GoogleCloudPlatform/kubernetes-engine-samples
+Code
+Issues 1
+Pull requests 1
+Projects 0
+Wiki
+Insights
+kubernetes-engine-samples/guestbook/all-in-one/frontend.yaml
+d29b0c0 on 29 Mar 2016
+@jeffmendoza jeffmendoza Change frontend service to use LoadBalancer.
+58 lines (57 sloc) 1.33 KB
 apiVersion: v1
 kind: Service
 metadata:
   name: frontend
   labels:
-    app: semanticbus
+    app: guestbook
     tier: frontend
 spec:
   type: LoadBalancer
@@ -11,7 +38,7 @@ spec:
     # the port that this service should serve on
   - port: 80
   selector:
-    app: semanticbus
+    app: guestbook
     tier: frontend
 ---
 apiVersion: v1
@@ -21,7 +48,7 @@ metadata:
   # these labels can be applied automatically
   # from the labels in the pod template if not set
   labels:
-    app: semanticbus
+    app: guestbook
     tier: frontend
 spec:
   # this replicas value is default
@@ -35,23 +62,23 @@ spec:
   template:
     metadata:
       labels:
-        app: semanticbus
+        app: guestbook
         tier: frontend
     spec:
       containers:
-      - name: semanticbus-front
+      - name: php-redis
         image: semanticbus/semanticbus
         resources:
           requests:
-            cpu: 500m
-            memory: 2000Mi
+            cpu: 100m
+            memory: 100Mi
         env:
         - name: GET_HOSTS_FROM
-          # value: dns
+          value: dns
           # If your cluster config does not include a dns service, then to
           # instead access environment variables to find service host
           # info, comment out the 'value: dns' line above, and uncomment the
           # line below.
-          value: env
+          # value: env
         ports:
-- containerPort: 80
+        - containerPort: 80

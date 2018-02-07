@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: frontend
   labels:
-    app: guestbook
+    app: semanticbus
     tier: frontend
 spec:
   type: LoadBalancer
@@ -11,7 +11,7 @@ spec:
     # the port that this service should serve on
   - port: 80
   selector:
-    app: guestbook
+    app: semanticbus
     tier: frontend
 ---
 apiVersion: v1
@@ -21,12 +21,12 @@ metadata:
   # these labels can be applied automatically
   # from the labels in the pod template if not set
   labels:
-    app: guestbook
+    app: semanticbus
     tier: frontend
 spec:
   # this replicas value is default
   # modify it according to your case
-  replicas: 3
+  replicas: 2
   # selector can be applied automatically
   # from the labels in the pod template if not set
   # selector:
@@ -35,7 +35,7 @@ spec:
   template:
     metadata:
       labels:
-        app: guestbook
+        app: semanticbus
         tier: frontend
     spec:
       containers:

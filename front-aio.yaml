@@ -48,12 +48,12 @@ spec:
         tier: frontend
     spec:
       containers:
-      - name: php-redis
+      - name: SemanticbusFront
         image: semanticbus/semanticbus
         resources:
           requests:
-            cpu: 400m
-            memory: 800Mi
+            cpu: 500m
+            memory: 1200Mi
         env:
         - name: GET_HOSTS_FROM
           value: env

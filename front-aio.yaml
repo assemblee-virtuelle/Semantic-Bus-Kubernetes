@@ -65,5 +65,7 @@ spec:
           # value: env
         - name: PORT
           value: "80"
+        - name: AMQPHOST
+          value: "dataPlayersProd"
         ports:
         - containerPort: 80

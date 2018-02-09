@@ -43,6 +43,10 @@ kind: Ingress
 metadata:
   name: test-ingress
 spec:
+ tls:
+  - secretName: semantic-bus-org-tls
   backend:
     serviceName: frontend
     servicePort: 80
+
+

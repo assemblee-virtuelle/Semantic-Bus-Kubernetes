@@ -43,7 +43,7 @@ kind: Ingress
 metadata:
   name: test-ingress
 spec:
- tls:
+  tls:
   - secretName: semantic-bus-org-tls
   backend:
     serviceName: frontend

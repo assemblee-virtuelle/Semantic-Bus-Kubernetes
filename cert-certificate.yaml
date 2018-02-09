@@ -17,6 +17,6 @@ spec:
       domains:
       - semantic-bus.org
     - http01:
-        ingress: my-ingress
+        ingress: test-ingress
       domains:
       - www.semantic-bus.org

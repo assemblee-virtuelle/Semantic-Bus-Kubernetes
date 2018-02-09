@@ -43,10 +43,19 @@ kind: Ingress
 metadata:
   name: test-ingress
 spec:
-  Certificate:
+  rules:
+  - host: prod.semantic-bus.org
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: frontend
+          servicePort: 80
+  tls:
   - secretName: semantic-bus-org-tls
-  backend:
-    serviceName: frontend
-    servicePort: 80
+    hosts:
+    - prod.semantic-bus.org
+
+
 
 

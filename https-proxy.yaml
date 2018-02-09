@@ -36,7 +36,7 @@ spec:
     - http01:
         ingress: test-ingress
       domains:
-      - semantic-bus.org
+      - prod.semantic-bus.org
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress

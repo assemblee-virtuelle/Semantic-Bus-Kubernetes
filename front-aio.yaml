@@ -26,7 +26,7 @@ metadata:
 spec:
   # this replicas value is default
   # modify it according to your case
-  replicas: 2
+  replicas: 3
   # selector can be applied automatically
   # from the labels in the pod template if not set
   # selector:
@@ -43,8 +43,8 @@ spec:
         image: semanticbus/semanticbus
         resources:
           requests:
-            cpu: 400m
-            memory: 1000Mi
+            cpu: 500m
+            memory: 2000Mi
         env:
         - name: GET_HOSTS_FROM
           value: env

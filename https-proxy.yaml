@@ -55,8 +55,7 @@ spec:
           servicePort: 80
   tls:
   - secretName: semantic-bus-org-tls
-    hosts:
-    - prod.semantic-bus.org
+    hosts: prod.semantic-bus.org
 
 
 

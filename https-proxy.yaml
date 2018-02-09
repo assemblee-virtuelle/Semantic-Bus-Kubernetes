@@ -38,6 +38,8 @@ spec:
       domains:
       - prod.semantic-bus.org
 ---
+
+
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:

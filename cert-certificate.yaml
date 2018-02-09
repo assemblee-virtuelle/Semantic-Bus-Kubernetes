@@ -1,0 +1,22 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: semantic-bus-org
+  namespace: default
+spec:
+  secretName: semantic-bus-org-tls
+  issuerRef:
+    name: letsencrypt-staging
+  commonName: semantic-bus.org
+  dnsNames:
+  - www.semantic-bus.org
+  acme:
+    config:
+    - http01:
+        ingressClass: nginx
+      domains:
+      - semantic-bus.org
+    - http01:
+        ingress: my-ingress
+      domains:
+      - www.semantic-bus.org

@@ -54,7 +54,7 @@ spec:
           serviceName: frontend
           servicePort: 80
   tls:
-  - secretName: semantic-bus-org-tls
+  - secretName: letsencrypt-staging
     hosts: 
     - prod.semantic-bus.org
 

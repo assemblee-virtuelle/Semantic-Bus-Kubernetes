@@ -26,7 +26,7 @@ spec:
     name: letsencrypt-staging
   commonName: semantic-bus.org
   dnsNames:
-  - semantic-bus.org
+  - prod.semantic-bus.org
   acme:
     config:
     #- http01:
@@ -36,7 +36,7 @@ spec:
     - http01:
         ingress: test-ingress
       domains:
-      - semantic-bus.org
+      - prod.semantic-bus.org
 ---
 
 

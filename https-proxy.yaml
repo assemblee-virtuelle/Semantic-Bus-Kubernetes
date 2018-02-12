@@ -37,6 +37,7 @@ spec:
         ingress: test-ingress
       domains:
       - prod.semantic-bus.org
+
 ---
 
 apiVersion: extensions/v1beta1
@@ -52,10 +53,19 @@ spec:
         backend:
           serviceName: frontend
           servicePort: 80
+
+  - host: semantic-bus.org
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: frontend
+          servicePort: 80
   tls:
   - secretName: letsencrypt-staging
     hosts: 
     - prod.semantic-bus.org
+    - semantic-bus.org
 
 
 

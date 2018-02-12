@@ -53,16 +53,8 @@ spec:
         backend:
           serviceName: frontend
           servicePort: 80
-
-  - host: semantic-bus.org
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: frontend
-          servicePort: 80
   tls:
-  - secretName: letsencrypt-staging
+  - secretName: semantic-bus-org-tls
     hosts: 
     - prod.semantic-bus.org
     - semantic-bus.org

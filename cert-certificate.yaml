@@ -7,16 +7,16 @@ spec:
   secretName: semantic-bus-org-tls
   issuerRef:
     name: letsencrypt-staging
-  commonName: semantic-bus.org
+  commonName: prod.semantic-bus.org
   dnsNames:
-  - www.semantic-bus.org
+  - prod.semantic-bus.org
   acme:
     config:
     - http01:
-        ingressClass: nginx
+       ingressClass: nginx
       domains:
       - semantic-bus.org
     - http01:
         ingress: test-ingress
       domains:
-      - www.semantic-bus.org
+      - prod.semantic-bus.org

@@ -16,8 +16,7 @@ spec:
     hosts: 
     - prod.semantic-bus.org
 
-
-----
+---
 
 apiVersion: v1
 kind: Service

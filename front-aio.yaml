@@ -1,3 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: test-ingress
+spec:
+  rules:
+  - host: prod.semantic-bus.org
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: frontend
+          servicePort: 80
+  tls:
+  - secretName: semantic-bus-org-tls
+    hosts: 
+    - prod.semantic-bus.org
+
+
+----
+
 apiVersion: v1
 kind: Service
 metadata:

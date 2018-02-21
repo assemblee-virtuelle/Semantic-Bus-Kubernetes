@@ -19,7 +19,6 @@ metadata:
     kubernetes.io/ingress.class: traefik
 spec:
   rules:
-  - host: traefik-ui.minikube
     http:
       paths:
       - backend:

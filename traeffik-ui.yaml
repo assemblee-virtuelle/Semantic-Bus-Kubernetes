@@ -5,7 +5,7 @@ metadata:
   namespace: kube-system
 spec:
   selector:
-    k8s-app: traefik-ingress-lb
+    app: olfactory-shrimp-traefik
   type: NodePort
   ports:
   - port: 80

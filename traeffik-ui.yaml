@@ -19,8 +19,9 @@ metadata:
     kubernetes.io/ingress.class: traefik
 spec:
   rules:
-    - http:
-        paths:
-          backend:
-            serviceName: traefik-web-ui
-            servicePort: 80
+  - http:
+     paths:
+     - path: /
+       backend:
+         serviceName: traefik-web-ui
+         servicePort: 80

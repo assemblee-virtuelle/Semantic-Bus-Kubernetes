@@ -4,9 +4,9 @@ metadata:
   name: traefik-web-ui
   namespace: kube-system
 spec:
-  type: NodePort
   selector:
     k8s-app: traefik-ingress-lb
+  type: NodePort
   ports:
   - port: 80
     targetPort: 8080

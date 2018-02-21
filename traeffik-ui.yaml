@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: traefik-web-ui
   namespace: default
-   annotations:
+  annotations:
     kubernetes.io/ingress.class: gce
 spec:
   selector:

@@ -18,7 +18,7 @@ metadata:
     kubernetes.io/ingress.class: traefik
 spec:
   rules:
-  - host : 35.205.56.79
+  - host : traefik.semantic-bus.org
     http:
       paths:
       - path : /

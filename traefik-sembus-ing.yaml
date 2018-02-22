@@ -18,7 +18,8 @@ metadata:
     kubernetes.io/ingress.class: traefik
 spec:
   rules:
-  - http:
+  - host : traefik.semantic-bus
+    http:
       paths:
       - path : /
         backend:

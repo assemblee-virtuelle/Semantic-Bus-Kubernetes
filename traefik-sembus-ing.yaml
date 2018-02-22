@@ -20,6 +20,7 @@ spec:
   rules:
   - http:
       paths:
-      - backend:
+      - path : /
+        backend:
           serviceName: semanticbus-traefik-service
           servicePort: 80

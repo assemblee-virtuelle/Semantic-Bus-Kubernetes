@@ -146,8 +146,8 @@ dashboard:
     # labels:
     #   key: value
   auth:
-    # basic:
-    #   username: password
+    basic:
+      test: $apr1$H6uskkkW$IgXLP6ewTrSuBkTrqE8wj/
   statistics:
     ## Number of recent errors to show in the ‘Health’ tab
     # recentErrors:

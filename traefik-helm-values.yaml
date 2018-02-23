@@ -45,7 +45,7 @@ acme:
   ## value in this chart to preserve legacy behavior and avoid a breaking
   ## change. Users of this chart should strongly consider making the switch to
   ## the dns-01 challenge.
-  challengeType: dns-01
+  challengeType: tls-sni-01
   ## Configure dnsProvider to perform domain verification using dns challenge
   ## Applicable only if using the dns-01 challenge type
   dnsProvider:

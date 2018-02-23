@@ -38,7 +38,7 @@ acme:
   enabled: true
   email: semanticbusdev@gmail.com
   staging: true
-  logging: false
+  logging: true
   ## ACME challenge type: "tls-sni-01" or "dns-01"
   ## Note the chart's default of tls-sni-01 has been DEPRECATED and (except in
   ## certain circumstances) DISABLED by Let's Encrypt. It remains as a default
@@ -49,7 +49,7 @@ acme:
   ## Configure dnsProvider to perform domain verification using dns challenge
   ## Applicable only if using the dns-01 challenge type
   dnsProvider:
-    name: gandiv5
+    name: nil
     auroradns:
       AURORA_USER_ID: ""
       AURORA_KEY: ""

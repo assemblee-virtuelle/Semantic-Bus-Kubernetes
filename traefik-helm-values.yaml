@@ -37,7 +37,7 @@ ssl:
 acme:
   enabled: true
   email: semanticbusdev@gmail.com
-  staging: true
+  staging: false
   logging: true
   ## ACME challenge type: "tls-sni-01" or "dns-01"
   ## Note the chart's default of tls-sni-01 has been DEPRECATED and (except in

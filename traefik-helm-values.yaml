@@ -3,7 +3,7 @@ image: traefik
 imageTag: 1.5.1
 ## can switch the service type to NodePort if required
 serviceType: LoadBalancer
-loadBalancerIP:
+loadBalancerIP: 35.205.56.79
 # loadBalancerSourceRanges: []
 replicas: 1
 cpuRequest: 100m

@@ -135,7 +135,7 @@ acme:
     accessMode: ReadWriteOnce
     size: 1Gi
 dashboard:
-  enabled: true
+  enabled: false
   domain: traefik.semantic-bus.org
   service:
     # annotations:
@@ -175,7 +175,7 @@ accessLogs:
   # filePath: ""
   format: common  # choices are: common, json
 rbac:
-  enabled: false
+  enabled: true
 ## Enable the /metrics endpoint, for now only supports prometheus
 ## set to true to enable metric collection by prometheus
 metrics:

@@ -63,5 +63,7 @@ spec:
           value: "80"
         - name: AMQPHOST
           value: "dataPlayersProd"
+        - name : CONFIG_URL
+          value : "http://app-cee3fd62-a81e-48b2-a766-a8be305d5fa9.cleverapps.io/file/prod"
         ports:
         - containerPort: 80

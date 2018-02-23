@@ -49,7 +49,7 @@ acme:
   ## Configure dnsProvider to perform domain verification using dns challenge
   ## Applicable only if using the dns-01 challenge type
   dnsProvider:
-    name: nil
+    name: gandi
     auroradns:
       AURORA_USER_ID: ""
       AURORA_KEY: ""
@@ -83,7 +83,7 @@ acme:
       EXOSCALE_API_SECRET: ""
       EXOSCALE_ENDPOINT: ""
     gandi:
-      GANDI_API_KEY: ""
+      GANDI_API_KEY: "gmaP99Gs3ptKTF0GdDS9YXOA"
     godaddy:
       GODADDY_API_KEY: ""
       GODADDY_API_SECRET: ""

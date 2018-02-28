@@ -33,7 +33,7 @@ spec:
             cpu: 3000m
             memory: 3000Mi
         env:
-        - name: GET_HOSTS_FROM
+        - name: version
           value: prod/0.8
           # value: dns
           # If your cluster config does not include a dns service, then to

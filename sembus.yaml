@@ -22,6 +22,7 @@ spec:
       labels:
         app: semanticbus
         tier: frontend
+        version: '0.8'
     spec:
       containers:
       - name: semanticbus-front

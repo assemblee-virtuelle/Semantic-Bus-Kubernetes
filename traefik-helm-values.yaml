@@ -85,7 +85,7 @@ acme:
       EXOSCALE_API_SECRET: ""
       EXOSCALE_ENDPOINT: ""
     gandiv5:
-      GANDIV5_API_KEY: "LxV0nPiwW1AvCLVtE1HSy7A2"
+      GANDIV5_API_KEY: "bfnHOQGU5nBccJRyVXzLVwv3"
     gandi:
       GANDI_API_KEY: ""
     godaddy:

@@ -179,7 +179,7 @@ accessLogs:
   # filePath: ""
   format: common  # choices are: common, json
 rbac:
-  enabled: true
+  enabled: false
 ## Enable the /metrics endpoint, for now only supports prometheus
 ## set to true to enable metric collection by prometheus
 metrics:

@@ -11,7 +11,7 @@ metadata:
 spec:
   # this replicas value is default
   # modify it according to your case
-  replicas: 1
+  replicas: 4
   # selector can be applied automatically
   # from the labels in the pod template if not set
   # selector:
@@ -29,11 +29,11 @@ spec:
         imagePullPolicy: Always
         resources:
           requests:
-            cpu: 2500m
-            memory: 3000Mi
+            cpu: 1000m
+            memory: 2000Mi
         env:
         - name: version
-          value: prod/0.8.3
+          value: prod/0.8.4
           # value: dns
           # If your cluster config does not include a dns service, then to
           # instead access environment variables to find service host

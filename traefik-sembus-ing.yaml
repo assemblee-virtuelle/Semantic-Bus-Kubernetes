@@ -11,8 +11,8 @@ spec:
   - port: 80
     targetPort: 15672
     name : management
-  - port: 61613
-    targetPort: 61613
+  - port: 15674
+    targetPort: 15674
     name : stomp
 ---
 apiVersion: v1
@@ -55,5 +55,5 @@ spec:
       - path : /stomp
         backend:
           serviceName: rabbit-traefik-service
-          servicePort: 61613
+          servicePort: 15674
           

@@ -10,8 +10,10 @@ spec:
   ports:
   - port: 80
     targetPort: 15672
+    name : management
   - port: 61613
     targetPort: 61613
+    name : stomp
 ---
 apiVersion: v1
 kind: Service

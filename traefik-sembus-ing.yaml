@@ -31,7 +31,7 @@ metadata:
   namespace: kube-system
   annotations:
     kubernetes.io/ingress.class: traefik
-    ingress.kubernetes.io/rewrite-target : /user
+    ingress.kubernetes.io/rewrite-target : /
 spec:
   rules:
   - host : semantic-bus.org

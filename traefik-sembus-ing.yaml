@@ -37,7 +37,11 @@ spec:
   - host : semantic-bus.org
     http:
       paths:
-      - path : /
+      - path : /front
+        backend:
+          serviceName: semanticbus-traefik-service
+          servicePort: 80
+      - path : /ihm
         backend:
           serviceName: semanticbus-traefik-service
           servicePort: 80

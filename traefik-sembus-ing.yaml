@@ -1,6 +1,19 @@
 apiVersion: v1
 kind: Service
 metadata:
+  name: rabbit-traefik-service
+  namespace: kube-system
+spec:
+  selector:
+    app: semanticbus
+    tier: amqp
+  ports:
+  - port: 80
+    targetPort: 15672
+---
+apiVersion: v1
+kind: Service
+metadata:
   name: semanticbus-traefik-service
   namespace: kube-system
 spec:
@@ -27,3 +40,8 @@ spec:
         backend:
           serviceName: semanticbus-traefik-service
           servicePort: 80
+      - path : /amqp/
+        backend:
+          serviceName: rabbit-traefik-service
+          servicePort: 80
+          

@@ -36,11 +36,11 @@ spec:
   - host : semantic-bus.org
     http:
       paths:
-      - path : /front
+      - path : /front/*
         backend:
           serviceName: semanticbus-traefik-service
           servicePort: 80
-      - path : /amqp
+      - path : /amqp/*
         backend:
           serviceName: rabbit-traefik-service
           servicePort: 80

@@ -33,7 +33,7 @@ spec:
             memory: 3000Mi
         env:
         - name: version
-          value: prod/0.8.6
+          value: prod/0.8.7
           # value: dns
           # If your cluster config does not include a dns service, then to
           # instead access environment variables to find service host

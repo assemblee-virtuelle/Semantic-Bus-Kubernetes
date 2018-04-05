@@ -30,7 +30,7 @@ spec:
         resources:
           requests:
             cpu: 2000m
-            memory: 4200Mi
+            memory: 3000Mi
         env:
         - name: version
           value: prod/1.0

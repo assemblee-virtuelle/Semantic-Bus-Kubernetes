@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - name: semanticbus-amqp
-        image: byteflair/rabbitmq-stomp
+        image: semanticbus/rabbitmq-stomp
         imagePullPolicy: Always
         resources:
           requests:

@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: rabbit-service-direct
+  name: rabbit-service-direct-simple
   namespace: kube-system
   labels:
     app: semanticbus
@@ -18,7 +18,7 @@ spec:
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: rabbit
+  name: rabbit-simple
   namespace: kube-system
   # these labels can be applied automatically
   # from the labels in the pod template if not set

@@ -35,7 +35,7 @@ spec:
         - name: version
           value: prod/1.0
         - name: RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS
-          value: -rabbit log_levels [{file,[{file,"/var/log/rabbitmq/error.log"},{level,debug},{date,"$D0"},{size,10485760},{count,3}]},{console,[{enabled,true}]}]
+          value: -rabbit levels [{file,[{file,"/var/log/rabbitmq/error.log"},{level,debug},{date,"$D0"},{size,10485760},{count,3}]},{console,[{enabled,true}]}]
           # value: dns
           # If your cluster config does not include a dns service, then to
           # instead access environment variables to find service host

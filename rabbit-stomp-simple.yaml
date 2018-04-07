@@ -11,6 +11,7 @@ spec:
   ports:
     # the port that this service should serve on
   - port: 15672
+  - port: 15674
   selector:
     app: semanticbus
     tier: amqp

@@ -16,7 +16,7 @@ spec:
     name : stomp
   selector:
     app: semanticbus
-    tier: amqp
+    tier: amqp-simple
 ---
 apiVersion: v1
 kind: ReplicationController
@@ -27,7 +27,7 @@ metadata:
   # from the labels in the pod template if not set
   labels:
     app: semanticbus
-    tier: amqp
+    tier: amqp-simple
 spec:
   # this replicas value is default
   # modify it according to your case

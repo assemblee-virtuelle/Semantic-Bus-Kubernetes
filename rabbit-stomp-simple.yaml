@@ -8,6 +8,7 @@ metadata:
     tier: amqp-simple
 spec:
   type: LoadBalancer
+  loadBalancerIP: 35.195.196.184
   ports:
     # the port that this service should serve on
   - port: 15672

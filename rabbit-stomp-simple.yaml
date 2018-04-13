@@ -14,6 +14,8 @@ spec:
     name : management
   - port: 15674
     name : stomp
+  - port: 5672
+    name : amqp
   selector:
     app: semanticbus
     tier: amqp-simple
@@ -64,3 +66,5 @@ spec:
         - containerPort: 15672
         - containerPort: 61613
         - containerPort: 15674
+        - containerPort: 5672
+        

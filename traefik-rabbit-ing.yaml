@@ -10,6 +10,8 @@ spec:
   ports:
   - port: 80
     targetPort: 15672
+  - port: 5672
+    targetPort: 5672
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress

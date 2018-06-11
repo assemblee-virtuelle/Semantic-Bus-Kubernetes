@@ -59,4 +59,9 @@ spec:
         backend:
           serviceName: rabbit-traefik-service
           servicePort: 15674
+      - path : /amqp
+        backend:
+          serviceName: rabbit-traefik-service
+          servicePort: 5672
+       
           

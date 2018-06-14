@@ -29,8 +29,8 @@ spec:
         imagePullPolicy: Always
         resources:
           requests:
-            cpu: 2000m
-            memory: 3000Mi
+            cpu: 200m
+            memory: 500Mi
         env:
         - name: version
           value: prod/1.0

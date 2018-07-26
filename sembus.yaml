@@ -45,6 +45,6 @@ spec:
         - name: AMQPHOST
           value: "dataPlayersProd"
         - name : CONFIG_URL
-          value : "http://app-cee3fd62-a81e-48b2-a766-a8be305d5fa9.cleverapps.io/file/prod"
+          value : "https://raw.githack.com/data-players/grappe-config/master/prod.js"
         ports:
         - containerPort: 80

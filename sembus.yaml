@@ -45,6 +45,6 @@ spec:
         - name: AMQPHOST
           value: "dataPlayersProd"
         - name : CONFIG_URL
-          value : "https://raw.githack.com/data-players/grappe-config/master/prod.json"
+          value : "http://data-players.com/config/prod.json"
         ports:
         - containerPort: 80

@@ -11,7 +11,7 @@ metadata:
 spec:
   # this replicas value is default
   # modify it according to your case
-  replicas: 1
+  replicas: 2
   # selector can be applied automatically
   # from the labels in the pod template if not set
   # selector:
@@ -29,8 +29,8 @@ spec:
         imagePullPolicy: Always
         resources:
           requests:
-            cpu: 3000m
-            memory: 3000Mi
+            cpu: 1500m
+            memory: 1500Mi
         env:
         - name: version
           value: prod/0.9.0

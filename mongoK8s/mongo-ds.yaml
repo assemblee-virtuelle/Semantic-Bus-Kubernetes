@@ -1,0 +1,41 @@
+
+# Transparent Huge Pages (THP) est un système de 
+# gestion de la mémoire Linux qui réduit la charge de 
+# travail des recherches TLB (Translation Lookaside Buffer) 
+# sur les machines disposant de grandes quantités de mémoire en utilisant des pages de mémoire plus grandes.
+
+# Cependant, les charges de travail de base de données 
+# fonctionnent souvent mal avec THP, car elles ont tendance à avoir
+# des modèles d'accès mémoire plutôt clairs que contigus. Vous devez 
+# désactiver THP sur les machines Linux pour optimiser les performances avec MongoDB.
+---
+kind: DaemonSet
+apiVersion: apps/v1beta2
+metadata:
+  name: startup-script
+  namespace: db
+spec:
+  selector:
+    matchLabels:
+      role: startup-script
+  template:
+    metadata:
+      labels:
+        role: startup-script
+    spec:
+      hostPID: true
+      containers:
+      - name: startup-script
+        image: gcr.io/google-containers/startup-script:v1
+        securityContext:
+          privileged: true
+        env:
+        - name: STARTUP_SCRIPT
+          value: |
+            #! /bin/bash
+            set -o errexit
+            set -o pipefail
+            set -o nounset
+
+            echo 'never' > /sys/kernel/mm/transparent_hugepage/enabled
+            echo 'never' > /sys/kernel/mm/transparent_hugepage/defrag

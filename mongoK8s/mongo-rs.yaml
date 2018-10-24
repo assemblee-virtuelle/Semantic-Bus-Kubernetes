@@ -21,6 +21,9 @@ kind: StatefulSet
 metadata:
   name: mongo
   namespace: db
+   labels:
+     role: mongo
+     environment: prod
 spec:
   serviceName: "mongo"
   replicas: 3

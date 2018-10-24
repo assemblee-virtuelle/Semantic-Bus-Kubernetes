@@ -6,7 +6,7 @@ metadata:
   namespace: db
   labels:
     name: mongo
-    environment: test
+    environment: prod
 spec:
   ports:
   - port: 27017
@@ -14,7 +14,7 @@ spec:
   clusterIP: None
   selector:
     role: mongo
-    environment: test
+    environment: prod
 ---
 apiVersion: apps/v1beta2
 kind: StatefulSet
@@ -27,12 +27,12 @@ spec:
   selector:
     matchLabels:
       role: mongo
-      environment: test
+      environment: prod
   template:
     metadata:
       labels:
         role: mongo
-        environment: test
+        environment: prod
     spec:
       terminationGracePeriodSeconds: 10
       containers:
@@ -55,7 +55,7 @@ spec:
           image: cvallance/mongo-k8s-sidecar
           env:
             - name: MONGO_SIDECAR_POD_LABELS
-              value: "role=mongo,environment=test"
+              value: "role=mongo,environment=prod"
             - name: KUBE_NAMESPACE
               value: "db"
   volumeClaimTemplates:
@@ -67,7 +67,7 @@ spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
-          storage: 1Gi
+          storage: 10Gi
 ---
 kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1

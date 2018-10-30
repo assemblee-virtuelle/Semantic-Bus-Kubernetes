@@ -45,6 +45,7 @@ spec:
         - name: AMQPHOST
           value: "dataPlayersProd"
         - name : CONFIG_URL
-          value : "http://data-players.com/config/prod.json"
+          value : "http://data-players.com/config/prdTest.json
+"
         ports:
         - containerPort: 80

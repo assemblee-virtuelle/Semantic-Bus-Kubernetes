@@ -5,7 +5,7 @@ metadata:
   name: mongo2
   namespace: db
   labels:
-    name: mongo
+    name: mongo2
     environment: prod
 spec:
   ports:

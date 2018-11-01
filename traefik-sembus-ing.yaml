@@ -28,7 +28,7 @@ spec:
     app: semanticbus
     tier: frontend
   ports:
-  - port: 80
+  - port: 8080
     targetPort: 80
 ---
 apiVersion: extensions/v1beta1

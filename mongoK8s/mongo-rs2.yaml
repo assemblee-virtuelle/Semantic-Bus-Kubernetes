@@ -65,7 +65,7 @@ spec:
             - name: KUBE_NAMESPACE
               value: "db"
       volumes:
-        - name: mongo-volume
+        - name: mongo-storage
           persistentVolumeClaim:
             claimName: mongo-claim
 

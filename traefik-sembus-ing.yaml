@@ -51,7 +51,7 @@ spec:
         backend:
           serviceName: semanticbus-traefik-service
           servicePort: 8080
-       - path : /app
+      - path : /app
         backend:
           serviceName: semanticbus-traefik-service
           servicePort: 80

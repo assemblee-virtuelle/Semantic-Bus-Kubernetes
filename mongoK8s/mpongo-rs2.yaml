@@ -1,0 +1,71 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongo
+  namespace: db
+  labels:
+    name: mongo
+    environment: prod
+spec:
+  ports:
+  - port: 27017
+    targetPort: 27017
+  clusterIP: None
+  selector:
+    role: mongo
+    environment: prod
+---
+apiVersion: apps/v1beta2
+kind: StatefulSet
+metadata:
+  name: mongo
+  namespace: db
+  labels:
+    role: mongo
+    environment: prod
+spec:
+  serviceName: "mongo"
+  replicas: 2
+  selector:
+    matchLabels:
+      role: mongo
+      environment: prod
+  template:
+    metadata:
+      labels:
+        role: mongo
+        environment: prod
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+        - name: mongod
+          image: mongo:3.6
+          resources:
+            requests:
+              cpu: 1000m
+              memory: 1000Mi
+          command:
+            - mongod
+            - "--replSet"
+            - rs0
+            - "--bind_ip_all"
+            - "--repair"
+            - "--noprealloc"
+          ports:
+            - containerPort: 27017
+          volumeMounts:
+            - name: mongo-storage
+              mountPath: /data/db
+        - name: mongo-sidecar
+          image: cvallance/mongo-k8s-sidecar
+          env:
+            - name: MONGO_SIDECAR_POD_LABELS
+              value: "role=mongo,environment=prod"
+            - name: KUBE_NAMESPACE
+              value: "db"
+      volumes:
+        - name: mypd
+          persistentVolumeClaim:
+            claimName: myclaim
+

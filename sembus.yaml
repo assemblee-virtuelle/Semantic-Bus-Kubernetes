@@ -41,7 +41,7 @@ spec:
           # line below.
           # value: env
         - name: PORT
-          value: "80"
+          value: "8080"
         - name: AMQPHOST
           value: "dataPlayersProd"
         - name : CONFIG_URL

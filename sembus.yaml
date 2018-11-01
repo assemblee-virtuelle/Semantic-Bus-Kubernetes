@@ -48,4 +48,4 @@ spec:
           value : "http://data-players.com/config/prdTest.json
 "
         ports:
-        - containerPort: 80
+        - containerPort: 8080

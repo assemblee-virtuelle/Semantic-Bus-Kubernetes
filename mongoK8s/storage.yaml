@@ -20,3 +20,13 @@ provisioner: kubernetes.io/gce-pd
 parameters:
   type: pd-standard
   #fsType: xfs
+---
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: ssd2
+  namespace: db
+provisioner: kubernetes.io/gce-pd
+parameters:
+  type: pd-ssd
+  #fsType: xfs

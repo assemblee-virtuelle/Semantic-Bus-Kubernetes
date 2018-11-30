@@ -41,6 +41,6 @@ spec:
           # line below.
           # value: env
         - name : CONFIG_URL
-          value : "http://data-players.com/config/prod.json"
+          value : "http://data-players.com/config/prdTest.json"
         ports:
         - containerPort: 80
